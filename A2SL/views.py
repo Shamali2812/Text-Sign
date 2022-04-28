@@ -97,7 +97,7 @@ def animation_view(request):
 			#otherwise animation of word
 			else:
 				filtered_text.append(w)
-		words = filtered_text;
+		words = filtered_text
 
 
 		return render(request,'animation.html',{'words':words,'text':text})
@@ -140,3 +140,11 @@ def login_view(request):
 def logout_view(request):
 	logout(request)
 	return redirect("home")
+
+def signtotext_view(request):
+	return render(request, 'signtotext.html')
+
+def Tutorial_view(request):
+	return render(request,'Tutorial.ipynb')
+
+

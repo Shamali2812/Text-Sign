@@ -15,11 +15,11 @@
   margin-top:0;
   padding: 0;
   overflow: hidden;
-  background-color: #feda6a;
+  background-color: #85F4FF;
 }
 h2
 {
-  color: #feda6a;
+  color: black;
 }
 
 .li {
@@ -29,36 +29,36 @@ h2
 .li a {
   display: block;
   color: #393f4d;
-  font-size: 20px;
+  font-size: 25px;
   font-weight: bold;
   padding: 14px 16px;
   text-decoration: none;
 }
 
 li a:hover {
-  background-color: #393f4d;
-  color: #feda6a;
+  background-color: #051367;
+  color: white;
   font-weight: bold;
 }
 .form-style button{
 
-  width: 89%;
-	height:70%;
+  width: 80%;
+	height:60%;
 	padding: 5%;
-	background: #feda6a;
-	border-bottom: 2px solid #393f4d;;
+	background: #5D8BF4;
+	border-bottom: 5px solid #393f4d;;
 	border-top-style: none;
 	border-right-style: none;
 	border-left-style: none;
-	color: #393f4d;
+	color: black;
   font-weight: bold;
   font-size: 28px;
   font-family: "Times New Roman";
 }
 
 .form-style button:hover {
-  background-color: #393f4d;
-  color: #feda6a;
+  background-color: #051367;
+  color: white;
   font-weight: bold;
 }
 .split {
@@ -74,12 +74,12 @@ li a:hover {
 
 .left {
   left: 15;
-  border-right: 0px #feda6a solid;
+  border-right: 0px black solid;
 }
 
 .right {
   right: 0;
-  border-left: 1px #feda6a solid;
+  border-left: 1px black solid;
 }
 
 .mytext {
@@ -97,7 +97,7 @@ li a:hover {
 
   .mic {
       border:1px solid #393f4d;
-      background:#feda6a;
+      background:#5D8BF4;
       vertical-align:top;
       padding:0px;
       margin:0;
@@ -115,7 +115,7 @@ li a:hover {
     height: 42px;
     width: 160px;
     text-align: center;
-    background-color: #feda6a;
+    background-color: #5D8BF4;
     color: #393f4d;
     font-weight: bold;
     font-size: 24px;
@@ -123,19 +123,24 @@ li a:hover {
     vertical-align:top;
 }
 .submit:hover {
-  background-color: #393f4d;
-  color: #feda6a;
+  background-color: #051367;
+  color: white;
   font-weight: bold;
 }
 .td {
-  color: #feda6a;
+  color: black;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 25px;
 }
 
 body
 {
-  background-color: #404040
+  background-color: #DFF6FF;
+  /* background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-image: url('https://images.unsplash.com/photo-1524964056700-f5738231ad5e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8c2lnbiUyMGxhbmd1YWdlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60'); */
+  
 }
 
 .form-style{
@@ -152,7 +157,7 @@ body
   font-family: "Times New Roman";
 	text-align: center;
 	margin: -16px -16px 16px -16px;
-  color:#feda6a
+  color:black;
 }
 .form-style input[type="text"],
 .form-style input[type="password"],
@@ -200,24 +205,31 @@ body
 }
 
 .site-form span,label{
-  color: #feda6a;
+  color: black;
 }
 .errorlist{
     color: red;
     font-weight: bold;
 }
+
+p{
+  line-height: 26pt;
+}
+
 </style>
 <title>Homepage</title>
 </head>
-<div style="background-color:#404040;color:#feda6a;padding:10 10 1 10;border: 1px #feda6a groove;margin-bottom:0;">
+<div style="background-color:#5D8BF4;color:black;padding:10 10 1 10;border: 1px white groove;margin-bottom:0;">
 
-<h1 align=center>Audio To Sign Language Tool</h1>
+<h1 align=center>Sign Language Translator</h1>
 </div>
 <br>
 <body>
+
 <ul id="nav">
   <li class="li"><a class="active" href="{% url 'home' %}">Home</a></li>
-  <li class="li"><a href="{% url 'animation' %}">Convertor</a></li>
+  <li class="li"><a href="{% url 'animation' %}">Text to Sign</a></li>
+  <li class="li"><a href="{% url 'signtotext' %}">Sign to Text</a></li>
   {% if not user.is_authenticated %}
   <li class="li"><a href="{% url 'signup' %}">Sign Up</a></li>
   {% endif %}
@@ -226,7 +238,7 @@ body
   {% else %}
     <li class="li"><a href="{% url 'login' %}">Log-in</a></li>
   {% endif %}
-  <li class="li"><a href="{% url 'contact' %}">Contact</a></li>
+  <!-- <li class="li"><a href="{% url 'contact' %}">Contact</a></li> -->
   <li class="li"><a href="{% url 'about' %}">About</a></li>
 </ul>
 

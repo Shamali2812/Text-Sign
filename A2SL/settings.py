@@ -54,7 +54,7 @@ ROOT_URLCONF = 'A2SL.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates',],
+        'DIRS': ['templates','Tensorflow'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

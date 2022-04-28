@@ -9,7 +9,7 @@
 		<form action="" method="post" align="left">
 		{% csrf_token %}
 					<input type="text" name="sen" class="mytext" id="speechToText" placeholder="">
-					<button type="button" name="button" class="mic" onclick="record()"><img src="{% static 'mic3.png' %}" height="32px" width="38px" /></button>
+					<button type="button" name="button" class="mic" onclick="record()"><img src="https://cdn-icons-png.flaticon.com/512/709/709950.png" height="32px" width="38px" /></button>
 		  			&nbsp&nbsp&nbsp&nbsp
 		  			<input type="submit" name="submit" class="submit">
 
@@ -32,16 +32,11 @@
 		</tr>
 	</table></div>
   <div class="split right">
-  <h2 align="center">Sign Language Animation</h2>
+  <h2 align="center">Sign Language</h2>
 
 	<div style="text-align:center">	&nbsp&nbsp
   	<button class="submit" onclick="playPause()">Play/Pause</button>
-  	<!--  LETS USE ONLY PLAY PAUSE BUTTON WITH 720 *420 ,IT FITS THE SCREEN ASHISH
-
-  	<button onclick="makeBig()">Big</button>
-  	<button onclick="makeSmall()">Small</button>
-  	<button onclick="makeNormal()">Normal</button>-->
-
+  	
 
   	<video id="videoPlayer" width="600" height="350"  preload="auto" autoplay>
     	<source src="" type="video/mp4">
@@ -105,21 +100,7 @@
 	    	}
 		}
 	}
-	/* LETS USE ONLY PLAY PAUSE BUTTON WITH 720 *420 ,IT FITS THE SCREEN
-	function makeBig() {
-	    document.getElementById("videoPlayer").width = 560;
-		document.getElementById("videoPlayer").height = 360;
-	}
-
-	function makeSmall() {
-	    document.getElementById("videoPlayer").width = 320;
-		document.getElementById("videoPlayer").height = 180;
-	}
-
-	function makeNormal() {
-	    document.getElementById("videoPlayer").width = 420;
-		document.getElementById("videoPlayer").height =280;
-	}*/
+	
 	function playPause(){
   		if (document.getElementById("videoPlayer").paused){
     		play();}
